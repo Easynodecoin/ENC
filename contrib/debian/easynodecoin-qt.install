@@ -1,0 +1,6 @@
+usr/local/bin/easynodecoin-qt usr/bin
+share/pixmaps/easynodecoin32.xpm usr/share/pixmaps
+share/pixmaps/easynodecoin16.xpm usr/share/pixmaps
+share/pixmaps/easynodecoin128.png usr/share/pixmaps
+debian/easynodecoin-qt.desktop usr/share/applications
+debian/easynodecoin-qt.protocol usr/share/kde4/services/

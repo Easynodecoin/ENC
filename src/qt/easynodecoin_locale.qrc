@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/easynodecoin_bg.qm</file>
+        <file alias="de">locale/easynodecoin_de.qm</file>
+        <file alias="en">locale/easynodecoin_en.qm</file>
+        <file alias="es">locale/easynodecoin_es.qm</file>
+        <file alias="fi">locale/easynodecoin_fi.qm</file>
+        <file alias="fr">locale/easynodecoin_fr.qm</file>
+        <file alias="it">locale/easynodecoin_it.qm</file>
+        <file alias="ja">locale/easynodecoin_ja.qm</file>
+        <file alias="pl">locale/easynodecoin_pl.qm</file>
+        <file alias="pt">locale/easynodecoin_pt.qm</file>
+        <file alias="ru">locale/easynodecoin_ru.qm</file>
+        <file alias="sk">locale/easynodecoin_sk.qm</file>
+        <file alias="sv">locale/easynodecoin_sv.qm</file>
+        <file alias="vi">locale/easynodecoin_vi.qm</file>
+        <file alias="zh_CN">locale/easynodecoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/easynodecoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

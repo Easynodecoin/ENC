@@ -1,0 +1,11 @@
+[Protocol]
+exec=easynodecoin-qt '%u'
+protocol=easynodecoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

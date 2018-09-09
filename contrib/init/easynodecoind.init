@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  easynodecoind The Easynodecoin Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: easynodecoind
+# processname: easynodecoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/easynodecoind, see below
+if [ -f /etc/sysconfig/easynodecoind ]; then
+        . /etc/sysconfig/easynodecoind
+fi
+
+RETVAL=0
+
+prog=easynodecoind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/easynodecoind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/easynodecoind}
+
+# easynodecoind defaults to /usr/bin/easynodecoind, override with BITCOIND_BIN
+easynodecoind=${BITCOIND_BIN-/usr/bin/easynodecoind}
+
+# easynodecoind opts default to -disablewallet, override with BITCOIND_OPTS
+easynodecoind_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $easynodecoind $easynodecoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

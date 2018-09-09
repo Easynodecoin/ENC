@@ -1,0 +1,22 @@
+[Unit]
+Description=Easynodecoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=easynodecoincode
+Group=easynodecoincore
+
+Type=forking
+PIDFile=/var/lib/easynodecoind/easynodecoind.pid
+ExecStart=/usr/bin/easynodecoind -daemon -pid=/var/lib/easynodecoind/easynodecoind.pid \
+-conf=/etc/easynodecoincore/easynodecoin.conf -datadir=/var/lib/easynodecoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Easynodecoin
+Comment=Easynodecoin P2P Cryptocurrency
+Comment[fr]=Easynodecoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Easynodecoin, eşten eşe kriptografik sanal para birimi
+Exec=easynodecoin-qt %u
+Terminal=false
+Type=Application
+Icon=easynodecoin128
+MimeType=x-scheme-handler/easynodecoin;
+Categories=Office;Finance;

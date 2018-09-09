@@ -1,0 +1,68 @@
+Source: easynodecoin
+Section: utils
+Priority: optional
+Maintainer: Easynodecoin Dev <dev@easynodecoin.io>
+Uploaders: Easynodecoin Dev <dev@easynodecoin.io>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libevent-dev,
+ libboost-system1.48-dev | libboost-system-dev (>> 1.35),
+ libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.35),
+ libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.35),
+ libboost-thread1.48-dev | libboost-thread-dev (>> 1.35),
+ libboost-test1.48-dev | libboost-test-dev (>> 1.35),
+ libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.35),
+ qt4-qmake,
+ libqt4-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python
+Standards-Version: 3.9.2
+Homepage: https://easynodecoin.io/
+Vcs-Git: git://github.com/easynodecoin/easynodecoin-core.git
+Vcs-Browser: https://github.com/easynodecoin-dev/easynodecoin-core
+
+Package: easynodecoind
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Easynodecoin is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Easynodecoin uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Easynodecoin Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, easynodecoind, and the CLI tool
+ easynodecoin-cli to interact with the daemon.
+
+Package: easynodecoin-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Easynodecoin is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Easynodecoin uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Easynodecoin Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides Easynodecoin-Qt, a GUI for Easynodecoin based on Qt.
+
+Package: easynodecoin-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ Easynodecoin is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Easynodecoin uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Easynodecoin Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides easynodecoin-tx, a command-line transaction creation
+ tool which can be used without a easynodecoin daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.
