@@ -1,4 +1,4 @@
-Easynodecoin Core 0.12.1
+Easynodecoin Core 0.1
 =====================
 
 This is the official reference wallet for Easynodecoin digital currency and comprises the backbone of the Easynodecoin peer-to-peer network. You can [download Easynodecoin Core](https://www.easynodecoin.io/#downloads) or [build it yourself](#building) using the guides below.
