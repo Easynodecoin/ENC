@@ -488,7 +488,6 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
     CAmount nValueOut = 0;
     BOOST_FOREACH(const CTxOut& txout, tx.vout)
     {
-     LogPrintf("txout nValue: %i",txout.nValue);
         if (txout.nValue < 0)
             return state.DoS(100, false, REJECT_INVALID, "bad-txns-vout-negative");
         if (txout.nValue > MAX_MONEY)
@@ -1248,7 +1247,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    return blockValue / 10*60;
+    return blockValue / 100*60;
 }
 
 bool IsInitialBlockDownload()
