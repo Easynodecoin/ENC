@@ -1252,7 +1252,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
 	
-	if (nPrevHeight > 55000) {
+	if (nHeight > 55001) {
 	    return blockValue / 100*93;
     }
 	    return blockValue / 100*60;
